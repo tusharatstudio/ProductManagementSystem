@@ -1,0 +1,47 @@
+﻿@model ExpenseManagementSystem_Mvc.Models.UserData
+
+@{
+    ViewData["Title"] = "UpdateUser";
+    Layout = "~/Views/Shared/_UserProfile.cshtml";
+}
+
+<h2>UpdateUser</h2>
+
+<h4>UserData</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UpdateUser">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="display:none;">
+                <input asp-for="User_Id" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Full_Name" class="control-label"></label>
+                <input asp-for="Full_Name" class="form-control" />
+                <span asp-validation-for="Full_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email_Id" class="control-label"></label>
+                <input asp-for="Email_Id" class="form-control" />
+                <span asp-validation-for="Email_Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                @*<span asp-validation-for="Password" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="UserProfile">Back to User Profile Page</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

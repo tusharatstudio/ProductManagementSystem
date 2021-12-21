@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ExpenseManagementSystem_Mvc.Models.ProductData>
+
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<head>
+</head>
+<h2>Profile</h2>
+@*<h4>@Html.ActionLink("Add New Item", "AddItem")</h4>
+    <h5>@Html.ActionLink("Logout", "Logout", new { onclick = "return confirm('Are you sure wants to logged out?');" })</h5>
+*@
+@{
+
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Product_Id)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Product_Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product_Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product_Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="display:none;">
+                    @Html.DisplayFor(modelItem => item.Product_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product_Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product_Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product_Date)
+                </td>
+                <td>
+                    @Html.ActionLink("Update", "Update", new { id = item.Product_Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.Product_Id},
+                   new { onclick = "return confirm('Are you sure wants to delete?');" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

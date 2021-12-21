@@ -1,0 +1,92 @@
+﻿@model ExpenseManagementSystem_Mvc.Models.UserData
+
+@{
+
+    Layout = null;
+}
+
+<head>
+    <title>Signup Page</title>
+    <link rel="stylesheet" type="text/css" href="~/css/mybootstrap.css">
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" href="~/css/signin.css">
+</head>
+<body onload="return setPasswordType()">
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Create Account</h3>
+                </div>
+
+                <div class="card-body">
+                    <form asp-controller="User" asp-action="Login">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input asp-for="Full_Name" placeholder="Full Name" class="form-control" />
+                            <span asp-validation-for="Full_Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input asp-for="Email_Id" placeholder="Email Address" class="form-control" />
+                            <span asp-validation-for="Email_Id" class="text-danger"></span>
+                        </div>
+
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input asp-for="Password" placeholder="Enter Password" id="password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <div style="color:darkblue">
+                            <input type="checkbox" onclick="passwordVisibility()" /> Show Password
+                        </div><br />
+
+                        <div class="form-group d-flex justify-content-center">
+                            <input type="submit" value="Create Account" class="btn btn-primary btn-block">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links" >
+                        Have an account?<a asp-controller="User" asp-action="Login" style="color:red">Log In</a>
+                    </div>
+                    <script>
+                        function setPasswordType()
+                        {
+                            var x = document.getElementById("password");
+                            x.type = "password";
+                        }
+
+                        function passwordVisibility() {
+                            var x = document.getElementById("password");
+                            if (x.type === "password")
+                                x.type = "text";
+                            else
+                                x.type = "password";
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+@if (!string.IsNullOrEmpty(ViewBag.message))
+{
+    <p style="color:greenyellow">@ViewBag.message</p>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

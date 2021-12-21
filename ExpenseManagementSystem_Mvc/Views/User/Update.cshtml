@@ -1,0 +1,51 @@
+﻿@model ExpenseManagementSystem_Mvc.Models.ProductData
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Update</h2>
+
+<h4>ProductData</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="User" asp-action="Update">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="display:none;">
+                <input asp-for="User_Id" class="form-control" />
+            </div>
+
+            <div class="form-group" style="display:none;">
+                <input asp-for="Product_Id" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Product_Quantity" class="control-label"></label>
+                <input asp-for="Product_Quantity" class="form-control" />
+                <span asp-validation-for="Product_Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product_Price" class="control-label"></label>
+                <input asp-for="Product_Price" class="form-control" />
+                <span asp-validation-for="Product_Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product_Date" class="control-label"></label>
+                <input asp-for="Product_Date" class="form-control" />
+                <span asp-validation-for="Product_Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Back to Product Profile Page.", "Profile", "User")
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

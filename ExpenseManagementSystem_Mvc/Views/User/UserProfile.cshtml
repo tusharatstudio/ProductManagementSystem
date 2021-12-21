@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ExpenseManagementSystem_Mvc.Models.UserData>
+
+@{
+    ViewData["Title"] = "UserProfile";
+    Layout = "~/Views/Shared/_UserProfile.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserProfile</title>
+    <link rel="stylesheet" href="~/css/site.min.css" />
+</head>
+<body>
+
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Full_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="display:none;">
+                    @Html.DisplayFor(modelItem => item.User_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Full_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.ActionLink("Update", "UpdateUser", new { id=item.User_Id})
+                </td>
+            </tr>
+         }
+    </tbody>
+</table>
+</body>
+</html>
