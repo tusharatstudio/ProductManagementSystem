@@ -1,0 +1,14 @@
+E:\Project\ExpenseManagementSystem\ExpenseManagementSystem_Api\bin\Debug\netcoreapp2.1\ExpenseManagementSystem_Api.deps.json
+E:\Project\ExpenseManagementSystem\ExpenseManagementSystem_Api\bin\Debug\netcoreapp2.1\ExpenseManagementSystem_Api.runtimeconfig.json
+E:\Project\ExpenseManagementSystem\ExpenseManagementSystem_Api\bin\Debug\netcoreapp2.1\ExpenseManagementSystem_Api.runtimeconfig.dev.json
+E:\Project\ExpenseManagementSystem\ExpenseManagementSystem_Api\bin\Debug\netcoreapp2.1\ExpenseManagementSystem_Api.dll
+E:\Project\ExpenseManagementSystem\ExpenseManagementSystem_Api\obj\Debug\netcoreapp2.1\ExpenseManagementSystem_Api.csprojAssemblyReference.cache
+E:\Project\ExpenseManagementSystem\ExpenseManagementSystem_Api\obj\Debug\netcoreapp2.1\ExpenseManagementSystem_Api.csproj.CoreCompileInputs.cache
+E:\Project\ExpenseManagementSystem\ExpenseManagementSystem_Api\obj\Debug\netcoreapp2.1\ExpenseManagementSystem_Api.RazorAssemblyInfo.cache
+E:\Project\ExpenseManagementSystem\ExpenseManagementSystem_Api\obj\Debug\netcoreapp2.1\ExpenseManagementSystem_Api.RazorAssemblyInfo.cs
+E:\Project\ExpenseManagementSystem\ExpenseManagementSystem_Api\obj\Debug\netcoreapp2.1\ExpenseManagementSystem_Api.AssemblyInfoInputs.cache
+E:\Project\ExpenseManagementSystem\ExpenseManagementSystem_Api\obj\Debug\netcoreapp2.1\ExpenseManagementSystem_Api.AssemblyInfo.cs
+E:\Project\ExpenseManagementSystem\ExpenseManagementSystem_Api\obj\Debug\netcoreapp2.1\ExpenseManagementSystem_Api.RazorTargetAssemblyInfo.cache
+E:\Project\ExpenseManagementSystem\ExpenseManagementSystem_Api\bin\Debug\netcoreapp2.1\ExpenseManagementSystem_Api.pdb
+E:\Project\ExpenseManagementSystem\ExpenseManagementSystem_Api\obj\Debug\netcoreapp2.1\ExpenseManagementSystem_Api.dll
+E:\Project\ExpenseManagementSystem\ExpenseManagementSystem_Api\obj\Debug\netcoreapp2.1\ExpenseManagementSystem_Api.pdb
